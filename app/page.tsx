@@ -3,6 +3,7 @@
 import { WalletProvider } from './WalletContext';
 import { WalletConnect } from './WalletConnect';
 import WalletPage from './WalletPage';
+import { GillProvider } from './GillProvider';
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
       <h1 className='text-2xl mt-4 ml-[40%]'>Solana Wallet Adapter</h1>
       <WalletProvider>
         <WalletConnect />
-        <WalletPage />
+        <GillProvider>
+          <WalletPage />
+        </GillProvider>
       </WalletProvider>
     </div>
   );

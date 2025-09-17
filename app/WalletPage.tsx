@@ -2,12 +2,17 @@
 
 import React from 'react';
 import { useWallet } from './WalletContext';
+import { useBalance } from '@gillsdk/react';
 
 const WalletPage = () => {
   const { account, wallet } = useWallet();
-
+  const { balance } = useBalance({
+    address: account?.address,
+  });
   console.log({ account });
   console.log({ wallet });
+
+  console.log({ balance });
 
   return (
     wallet && (
@@ -16,6 +21,12 @@ const WalletPage = () => {
           Connected to
           <span className='font-bold'> {account?.address}</span>
         </h1>
+        <h2 className='font-semibold text-xl'>
+          Balance
+          <span className='ml-2'>
+            {balance ? `${(Number(balance) / 1e9).toFixed(4)} SOL` : '0 SOL'}
+          </span>
+        </h2>
       </div>
     )
   );
