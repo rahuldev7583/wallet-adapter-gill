@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@gillsdk/react": "file:../gill/packages/react",
+    "@wallet-standard/core": "^1.1.1",
+    "@wallet-standard/react": "^1.0.1",
+    "gill": "file:../gill/packages/gill",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "next": "15.5.3"
