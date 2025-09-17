@@ -3,6 +3,7 @@
 import React from 'react';
 import { useWallet } from './WalletContext';
 import { useBalance } from '@gillsdk/react';
+import { MemoTransactionButton } from './SignTransaction';
 
 const WalletPage = () => {
   const { account, wallet, connectedWallet, isConnected, setConnectedWallet } =
@@ -34,6 +35,7 @@ const WalletPage = () => {
             {balance ? `${(Number(balance) / 1e9).toFixed(4)} SOL` : '0 SOL'}
           </span>
         </h2>
+        <MemoTransactionButton text={'TestMemoTxn'} />
       </div>
     )
   );

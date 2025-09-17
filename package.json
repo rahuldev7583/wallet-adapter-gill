@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@gillsdk/react": "file:../gill/packages/react",
+    "@solana-program/memo": "^0.8.0",
+    "@solana/react": "^3.0.3",
     "@tanstack/react-query": "^5.89.0",
     "@wallet-standard/core": "^1.1.1",
     "@wallet-standard/react": "^1.0.1",
